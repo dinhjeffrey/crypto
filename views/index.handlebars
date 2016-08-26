@@ -28,6 +28,7 @@ $('#submit').click(function(event) {
 	let seconds = Math.floor(new Date() / 1000)
 	let uid = "abc@abc.com"
 	let publicKey = "06f980e1e4442b60676610f2dfb54e6c"
+	let ip = "127.0.0.1"
 
 	let message = privateKey+seconds+uid+publicKey
 	let signature = Crypto.HMAC(Crypto.SHA1, message, privateKey)
@@ -40,17 +41,19 @@ $('#submit').click(function(event) {
 			publickey: publicKey, 
 			uid : uid, 
 			time: seconds, 
-			signature: signature
+			signature: signature,
+			ip: ip,
+			authentication: true
 		} ,
 		success: function (data) {
 			$('#crypto').show()
 			let parsedData = data.split(/\n/)
 			
 
-			// add sd script
-			let script = document.createElement('script')
-			script.setAttribute('src', 'https://CryptoPhoto.com/api/token?sd=' + parsedData[1])
-			document.head.appendChild(script)
+			// add sd script (only first time)
+			// let script = document.createElement('script')
+			// script.setAttribute('src', 'https://CryptoPhoto.com/api/token?sd=' + parsedData[1])
+			// document.head.appendChild(script)
 
 			// add tv script
 			// let script2 = document.createElement('script')
@@ -76,7 +79,7 @@ $('#submit').click(function(event) {
 					signature: signature
 			} ,
 			success: function (data) { 
-				console.log("OH YO")
+				console.log(data)
 			}})
 		}
 	})
