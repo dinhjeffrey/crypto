@@ -48,5 +48,78 @@
       </footer>
 
     </div> <!-- /container -->
+
+    
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/hmac-sha1.js"></script>
+<script>
+// hides crypto div
+$(document).ready(function(){
+  $('#crypto').hide(0);  //or do it through css
+  });
+
+$('#submit').click(function(event) {
+  // event.preventDefault(); // prevents page from refreshing
+  let privateKey = "c5dcf5005ff89226887f8c841fce83a9"
+  let seconds = Math.floor(new Date() / 1000)
+  let uid = "abc@abc.com"
+  let publicKey = "06f980e1e4442b60676610f2dfb54e6c"
+  let ip = "127.0.0.1"
+
+  let message = privateKey+seconds+uid+publicKey
+  let signature = CryptoJS.HmacSHA1(message, privateKey).toString()
+
+  $.ajax({
+    type: "POST",
+    url: 'http://cryptophoto.com/api/get/session',
+    data: { 
+      publickey: publicKey, 
+      uid : uid, 
+      time: seconds, 
+      signature: signature,
+      ip: ip,
+      authentication: true
+    } ,
+    success: function (data) {
+      $('#crypto').show()
+      let parsedData = data.split(/\n/)
+      
+
+      // add sd script (only first time)
+      // let script = document.createElement('script')
+      // script.setAttribute('src', 'https://CryptoPhoto.com/api/token?sd=' + parsedData[1])
+      // document.head.appendChild(script)
+
+      // add tv script
+      // let script2 = document.createElement('script')
+      // script2.setAttribute('src', 'https://cryptophoto.com/api/tv?key=66551793516cc975d90c663fe85ecaca&sid=' + parsedData[1])
+      // script2.setAttribute('async', 'true')
+      // document.head.appendChild(script2)
+
+      // add challenge script
+      let script3 = document.createElement('script')
+      script3.setAttribute('src', 'https://CryptoPhoto.com/api/challenge?sd=' + parsedData[1])
+      document.head.appendChild(script3)
+
+      console.log(data)
+
+      // post verify request
+      $.ajax({
+        type: "POST",
+        url: 'http://cryptophoto.com/api/verify',
+        data: { 
+          publickey: publicKey, 
+          uid : uid, 
+          time: seconds, 
+          signature: signature
+      } ,
+      success: function (data) { 
+        console.log(data)
+      }})
+    }
+  })
+})
+</script>
 </body>
 </html>

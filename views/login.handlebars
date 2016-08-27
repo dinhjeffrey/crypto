@@ -1,5 +1,5 @@
 <h2 class="page-header">Account Login</h2>
-<form method="post" action="/users/login">
+{{!-- <form method="post" action="/users/login"> --}}
   <div class="form-group">
     <label>Username</label>
     <input type="text" class="form-control" name="username" placeholder="Username">
@@ -8,5 +8,11 @@
     <label>Password</label>
     <input type="password" class="form-control" name="password" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+  <button id="submit" type="submit" class="btn btn-default">Submit</button>
+
+  <div id='crypto'>
+<input type='hidden' name='cryptophoto'>
+    <div id='cp_widget' style='margin: 10px auto;width:300px'>Loading...</div>
+    <input type='submit' value='Continue'>
+</div>
+{{!-- </form> --}}
