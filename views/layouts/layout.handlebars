@@ -5,6 +5,63 @@
 	<link rel="stylesheet" href="/css/bootstrap.css" />
 	<link rel="stylesheet" href="/css/style.css" />
 </head>
+
+<script>
+
+var do_login = 1;
+var do_success = 0;
+var error = '';
+var do_cp_authentication = 0;
+var sid = '';
+
+let username = document.forms["myForm"]["username"].value
+
+
+alert(username)
+
+// if (isset($_POST["username"]) && isset($_POST["password"])) {
+//   // check user name and password
+//   if ($_POST["username"] == "demo" && $_POST["password"] == "demo") {
+//     // all OK
+//     // do CryptoPhoto authentication
+//     $do_cp_authentication = 1;
+//     $do_login = 0;
+
+//   }
+// } 
+// else if (isset($_POST['cryptophoto'])) {
+
+//   $do_login = 0; $do_cp_authentication = 1;
+ 
+//   // check for POSTed CP Token codes
+//   if ($_POST['token_selector'] &&
+//      (($_POST['token_response_field_row'] && $_POST['token_response_field_col']) ||
+//       $_POST['cp_phc']) ) {
+//     $verify = verify_response('12345', '127.0.0.1', $_POST);
+//     if ($verify['is_valid']) {// CP Token codes verified
+//       $do_success = 1;
+//       $do_cp_authentication = 0;
+//     }
+//   } else {
+//     $error = 'Missing required codes. Invalid authentication';
+//   }
+// }
+
+// if ($do_cp_authentication) {
+//   $session = get_api_session('12345', '127.0.0.1', true);
+//   if ($session['is_valid']) {
+//     if ($session['has_token'] == 'true') {
+//       $sid = $session['sid'];
+//     } else {
+//       $do_success = 1;
+//       $do_cp_authentication = 0;
+//     }
+//   } else {
+//     $error = $session['error'] . ( $session['errdesc'] ? ' ' . $session['errdesc'] : '' );
+//   }
+// }
+</script>
+
 <body>
 	<div class="container">
       <div class="header clearfix">
@@ -57,9 +114,12 @@
 // hides crypto div
 $(document).ready(function(){
   $('#crypto').hide(0);  //or do it through css
+//   $("#myForm").submit(function(){
+//   return false;
+// });
   });
 
-$('#submit').click(function(event) {
+$('#prelogin').click(function(event) {
   // event.preventDefault(); // prevents page from refreshing
   let privateKey = "c5dcf5005ff89226887f8c841fce83a9"
   let seconds = Math.floor(new Date() / 1000)
@@ -103,6 +163,9 @@ $('#submit').click(function(event) {
       document.head.appendChild(script3)
 
       console.log(data)
+     //  $("#myForm").submit(function(){
+     //    return true;
+     // });
 
       // post verify request
       $.ajax({
@@ -116,6 +179,7 @@ $('#submit').click(function(event) {
       } ,
       success: function (data) { 
         console.log(data)
+      
       }})
     }
   })
