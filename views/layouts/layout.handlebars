@@ -65,7 +65,7 @@ $('#prelogin').click(function(event) {
 
   let privateKey = "c5dcf5005ff89226887f8c841fce83a9"
   let seconds = Math.floor(new Date() / 1000)
-  let uid = 'abc@abc.com'
+  let uid = document.forms["myForm"]["username"].value //'abc@abc.com'
   let publicKey = "06f980e1e4442b60676610f2dfb54e6c"
   let ip = "127.0.0.1"
 
@@ -81,7 +81,7 @@ $('#prelogin').click(function(event) {
       time: seconds, 
       signature: signature,
       ip: ip,
-      authentication: true
+      authentication: false
     } ,
     success: function (data) {
       $('#crypto').show()
@@ -89,10 +89,12 @@ $('#prelogin').click(function(event) {
       
 
       // add sd script (only first time)
-      // let script = document.createElement('script')
-      // script.setAttribute('src', 'https://CryptoPhoto.com/api/token?sd=' + parsedData[1])
-      // document.head.appendChild(script)
 
+      if (parsedData[2] == "false") {
+        let script = document.createElement('script')
+        script.setAttribute('src', 'https://CryptoPhoto.com/api/token?sd=' + parsedData[1])
+        document.head.appendChild(script)
+      }
       // add tv script
       // let script2 = document.createElement('script')
       // script2.setAttribute('src', 'https://cryptophoto.com/api/tv?key=66551793516cc975d90c663fe85ecaca&sid=' + parsedData[1])
