@@ -6,6 +6,8 @@ $(document).ready(function(){
   $(function() {
     $( ".box" ).draggable();
   });
+
+
   });
 
 $('#prelogin').click(function(event) {
