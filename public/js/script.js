@@ -54,10 +54,10 @@ $('#prelogin').click(function(event) {
 
 
   // properties
-  var privateKey = "c5dcf5005ff89226887f8c841fce83a9"
+  var privateKey = "1034df66e0925f6d0e454c050c66b401"
   var seconds = Math.floor(new Date() / 1000)
   var uid = document.forms["myForm"]["username"].value //'abc@abc.com'
-  var publicKey = "06f980e1e4442b60676610f2dfb54e6c"
+  var publicKey = "eda5ab888b66c5eee3f7d7e4029221f3"
   var ip = "127.0.0.1"
 
   var message = privateKey+seconds+uid+publicKey
