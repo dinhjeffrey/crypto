@@ -321,6 +321,18 @@ a {
     color:white;
   
 }
+.account-registration {
+  /*next page*/
+  position: relative;
+  left: 50%;
+  margin-left: -200px;
+
+/*    height: 100px;
+*/    font-family: bebas;
+    font-size: 48pt;
+    color:white;
+  
+}
 
 /* form */
 
