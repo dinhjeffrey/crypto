@@ -192,7 +192,7 @@ footer{
 .pull-top-right {
   position:absolute;
    top:0;
-   right:0;
+   right:50px;
 }
 .bebas-36 {
   font-family: bebas;
@@ -201,4 +201,49 @@ footer{
 a {
   color: white;
   text-decoration: none;
+}
+
+.seamless {
+  /*middle of page*/
+   position: fixed;
+    top: 35%;
+    left: 20%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 600px;
+/*    height: 100px;
+*/    font-family: bebas;
+    font-size: 46pt;
+    color:white;
+}
+
+.how {
+  /*bottom of page*/
+   position: fixed;
+    top: 90%;
+    left: 50%;
+    margin-top: -0px;
+    margin-left: -125px;
+    /*width: 600px;*/
+/*    height: 100px;
+*/    font-family: bebas;
+    font-size: 24pt;
+    color:white;
+}
+
+.usage {
+  /*next page*/
+  position: relative;
+  left: 0%;
+  transform: translateY(20%);
+
+/*    height: 100px;
+*/    font-family: bebas;
+    font-size: 24pt;
+    color:white;
+  
+}
+
+.bebas-42 {
+    font-size: 42pt;
 }

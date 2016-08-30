@@ -25,6 +25,10 @@ $(document).ready(function(){
    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 });
 
+  //login
+  $("#login,#login1").click(function(e) {
+    $(".main").moveTo(3);
+  })
 
   });
 

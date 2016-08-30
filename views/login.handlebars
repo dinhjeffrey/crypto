@@ -34,12 +34,13 @@
               <li role="presentation"><a href="/">Dashboard</a></li>
               <li role="presentation"><a href="/users/logout">Logout</a></li>
             {{else}}
-              <li role="presentation"><a href="/users/login">Login</a></li>
+              <li role="presentation"><a id="login" href="#">Login</a></li>
               <li role="presentation"><a href="/users/register">Register</a></li>
             {{/if}}
-          </ul>
+          </ul>     
 </nav>
-
+<div class="seamless">Seamless. Secure. Safe. Logging in can't get easier.</div>
+<div class="how">Scroll down to see how</div>
 </div>
 </section>
 {{!-- end:elephant --}}
@@ -53,11 +54,23 @@
               <li role="presentation"><a href="/">Dashboard</a></li>
               <li role="presentation"><a href="/users/logout">Logout</a></li>
             {{else}}
-              <li role="presentation"><a href="/users/login">Login</a></li>
+              <li role="presentation"><a id="login1" href="#">Login</a></li>
               <li role="presentation"><a href="/users/register">Register</a></li>
             {{/if}}
           </ul>
 </nav>
+
+
+<div class="usage container">
+<p class="bebas-42">How do you log in with CryptoPhoto?</p>
+  <ol>
+  <li>On Chrome, allow unsafe scripts</li>
+<li>Register for a new user account on this site</li>
+<li>Follow the steps provided to setup the app and token on your phone</li>
+<li>Enter the user credentials provided in the app into the website. The cryptophoto widget will pop up and you can then choose the matching photo</li>
+  </ol>
+</div>
+
 
 </div>
 </section>
@@ -66,17 +79,7 @@
 {{!-- star --}}
 <section class="star">
 <div class="page_container">
-<nav>
-          <ul class="nav nav-pills pull-top-right bebas-36">
-            {{#if user}}
-              <li role="presentation"><a href="/">Dashboard</a></li>
-              <li role="presentation"><a href="/users/logout">Logout</a></li>
-            {{else}}
-              <li role="presentation"><a href="/users/login">Login</a></li>
-              <li role="presentation"><a href="/users/register">Register</a></li>
-            {{/if}}
-          </ul>
-</nav>
+
 
 </div>
 </section>
