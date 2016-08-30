@@ -7,6 +7,22 @@ $(document).ready(function(){
     $( ".box" ).draggable();
   });
 
+  // form
+  $(function() {
+  $('input').on('change', function() {
+    var input = $(this);
+    if (input.val().length) {
+      input.addClass('populated');
+    } else {
+      input.removeClass('populated');
+    }
+  });
+  
+  setTimeout(function() {
+    $('#fname').trigger('focus');
+  }, 500);
+});
+
   // snap scroll
   $(".main").onepage_scroll({
    sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
