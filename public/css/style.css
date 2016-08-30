@@ -160,7 +160,13 @@ footer{
 /*      max-width: 950px;*/
       z-index: 3;
     }
-
+.lake {
+  background-image: url("/image/lake.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  width: 100%;
+  height: auto;
+}
 .elephant {
   background-image: url("/image/elephant.png");
   background-repeat:no-repeat;
@@ -188,6 +194,23 @@ footer{
    top:0;
    right:50px;
 }
+.pull-bottom-mid {
+  align-self: flex-end;
+  padding-bottom: 100px;
+}
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .bebas-36 {
   font-family: bebas;
   font-size: 36pt; 
@@ -195,6 +218,11 @@ footer{
 a {
   color: white;
   text-decoration: none;
+}
+#a2 {
+  color: #ccc;
+  text-decoration: none;
+  border: 2px solid #aaa
 }
 
 .seamless {
@@ -209,6 +237,45 @@ a {
 */    font-family: bebas;
     font-size: 46pt;
     color:white;
+}
+.welcome {
+  /*middle of page*/
+   position: fixed;
+    top: 15%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -265px;
+    width: 600px;
+/*    height: 100px;
+*/    font-family: bebas;
+    font-size: 46pt;
+    color:#ccc;
+}
+.empty {
+  /*middle of page*/
+   position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -175px;
+    width: 600px;
+/*    height: 100px;
+*/    font-family: bebas;
+    font-size: 26pt;
+    color:#ccc;
+}
+.empty1 {
+  /*middle of page*/
+   position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -35px;
+    width: 600px;
+/*    height: 100px;
+*/    font-family: bebas;
+    font-size: 86pt;
+    color:#ccc;
 }
 
 .how {

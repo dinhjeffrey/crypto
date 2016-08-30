@@ -1,29 +1,51 @@
-<h2 class="page-header">Register</h2>
 {{#if errors}}
       {{#each errors}}
         <div class="alert alert-danger">{{msg}}</div>
       {{/each}}
 {{/if}}
+<div class="wrapper">
+<div class="main">
+<section class="lake">
+<div class="page_container">
 <form method="post" action="/users/register">
    <div class="form-group">
-    <label>Name</label>
-    <input type="text" class="form-control" placeholder="Name" name="name">
+    <label>
+    <input type="text" placeholder="Name" name="name">
+    <span>Name</span>
+  </label>
   </div>
   <div class="form-group">
-    <label>Username</label>
-    <input type="text" class="form-control" placeholder="Username" name="username">
+  <div class="form-group">
+    <label>
+    <input type="text" placeholder="Username" name="username">
+    <span>Username</span>
+  </label>
   </div>
    <div class="form-group">
-    <label>Email</label>
-    <input type="email" class="form-control" placeholder="Email" name="email">
+<div class="form-group">
+    <label>
+    <input type="text" placeholder="Email" name="email">
+    <span>Email</span>
+  </label>
   </div>
   <div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" placeholder="Password" name="password">
+  <div class="form-group">
+    <label>
+    <input type="password" placeholder="Password" name="password">
+    <span>Password</span>
+  </label>
   </div>
   <div class="form-group">
-    <label>Confirm Password</label>
-    <input type="password" class="form-control" placeholder="Password" name="password2">
+  <div class="form-group">
+    <label>
+    <input type="password" placeholder="Password" name="password2">
+    <span>Confirm Password</span>
+  </label>
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+
+  <input type="submit" value="Submit">
 </form>
+</div>
+</section>
+</div>
+</div>
