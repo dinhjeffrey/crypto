@@ -1,4 +1,6 @@
-<h2 class="page-header" style="color:white">Account Login</h2>
+<div class="wrapper">
+<div class="main">
+{{!-- <h2 class="page-header" style="color:white">Account Login</h2>
 <form method="post" action="/users/login" name="myForm" id="myForm">
   <div class="form-group">
     <label style="color:white">Username</label>
@@ -15,10 +17,71 @@
     <div id='cp_widget' style='margin: 10px auto;width:600px'>Loading...</div>
     <p style="color:red" align="center">Press the correct image to continue...</p>
 </div>
-</form>
-<br>
-<code style="display:block;white-space:pre-wrap">Usage:
+</form> --}}
+
+{{!-- <code style="display:block;white-space:pre-wrap">Usage:
 <li>On Chrome, allow unsafe scripts</li>
 <li>Register for a new user account</li>
 <li>Login and the CryptoPhoto registration wizard will show up. Follow the steps to set up the app & token on your phone.</li>
-<li>Now simply login with your user credentials and the CryptoPhoto Challenge widget will pop up. Tap your unique photo on the CryptoPhoto app to securely login using multi-factor 2FA two-step security!</li></code>
+<li>Now simply login with your user credentials and the CryptoPhoto Challenge widget will pop up. Tap your unique photo on the CryptoPhoto app to securely login using multi-factor 2FA two-step security!</li></code> --}}
+
+{{!-- elephant --}}
+<section class="elephant">
+<div class="page_container">
+<nav>
+          <ul class="nav nav-pills pull-top-right bebas-36">
+            {{#if user}}
+              <li role="presentation"><a href="/">Dashboard</a></li>
+              <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}}
+              <li role="presentation"><a href="/users/login">Login</a></li>
+              <li role="presentation"><a href="/users/register">Register</a></li>
+            {{/if}}
+          </ul>
+</nav>
+
+</div>
+</section>
+{{!-- end:elephant --}}
+
+{{!-- deer --}}
+<section class="deer">
+<div class="page_container">
+<nav>
+          <ul class="nav nav-pills pull-top-right bebas-36">
+            {{#if user}}
+              <li role="presentation"><a href="/">Dashboard</a></li>
+              <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}}
+              <li role="presentation"><a href="/users/login">Login</a></li>
+              <li role="presentation"><a href="/users/register">Register</a></li>
+            {{/if}}
+          </ul>
+</nav>
+
+</div>
+</section>
+{{!-- end:deer --}}
+
+{{!-- star --}}
+<section class="star">
+<div class="page_container">
+<nav>
+          <ul class="nav nav-pills pull-top-right bebas-36">
+            {{#if user}}
+              <li role="presentation"><a href="/">Dashboard</a></li>
+              <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}}
+              <li role="presentation"><a href="/users/login">Login</a></li>
+              <li role="presentation"><a href="/users/register">Register</a></li>
+            {{/if}}
+          </ul>
+</nav>
+
+</div>
+</section>
+{{!-- end:star --}}
+
+
+</div>
+</div>

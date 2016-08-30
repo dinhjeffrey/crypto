@@ -1,8 +1,14 @@
+/* fonts */
+@font-face{
+  font-family:"bebas";
+  src:url("/fonts/bebas_neue/BebasNeue Bold.otf");
+}
+
 /* Space out content a bit */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-image: url("/image/darthvader.jpg");
+  /*background-image: url("/image/darthvader.jpg");*/
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -143,4 +149,56 @@ footer{
 }
 .box .content {
   margin: auto;
+}
+
+/*snap scroll*/
+.wrapper {
+      height: 100% !important;
+      height: 100%;
+      margin: 0 auto; 
+      overflow: hidden;
+    }
+
+.main section .page_container {
+      position: relative;
+/*      top: 25%;*/
+      margin: 0 auto 0;
+/*      max-width: 950px;*/
+      z-index: 3;
+    }
+
+.elephant {
+  background-image: url("/image/elephant.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  width: 100%;
+  height: auto;
+}
+.deer {
+  background-image: url("/image/deer.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  width: 100%;
+  height: auto;
+}
+.star {
+  background-image: url("/image/star.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  width: 100%;
+  height: auto;
+}
+
+.pull-top-right {
+  position:absolute;
+   top:0;
+   right:0;
+}
+.bebas-36 {
+  font-family: bebas;
+  font-size: 36pt; 
+}
+a {
+  color: white;
+  text-decoration: none;
 }
